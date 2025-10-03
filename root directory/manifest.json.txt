@@ -1,0 +1,16 @@
+﻿{
+  "name": "5-Color Organization System",
+  "short_name": "5-Color System",
+  "description": "A simple, powerful framework to bring clarity to your work, studies, and life.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#1f2937",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

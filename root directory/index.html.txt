@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 5-Color System | A New Era of Organization</title>
+    <meta name="description" content="A simple, powerful framework to bring clarity to your work, studies, and life. Turn chaos into an actionable, visual system.">
+
+
+    <!-- Favicon and Manifest -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom color variables for easy use */
+        :root {
+            --clr-blue: #3b82f6;
+            --clr-green: #22c55e;
+            --clr-yellow: #eab308;
+            --clr-pink: #ec4899;
+            --clr-orange: #f97316;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, var(--clr-blue), var(--clr-green), var(--clr-yellow), var(--clr-pink), var(--clr-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 2.5rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            color: #6b7280;
+        }
+        .btn-primary {
+            background-color: #1f2937;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #374151;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--clr-blue);
+        }
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="assets/favicon.svg" alt="5-Color System Logo" class="w-8 h-8">
+                <span class="font-bold text-xl text-gray-800">5-Color System</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#method" class="nav-link font-medium text-gray-600">The Method</a>
+                <a href="#applications" class="nav-link font-medium text-gray-600">Applications</a>
+                <a href="#training" class="nav-link font-medium text-gray-600">Training</a>
+            </nav>
+            <a href="#training" class="hidden md:block btn-primary">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#method" class="block px-6 py-3 text-gray-600 font-medium">The Method</a>
+            <a href="#applications" class="block px-6 py-3 text-gray-600 font-medium">Applications</a>
+            <a href="#training" class="block px-6 py-3 text-gray-600 font-medium">Training</a>
+            <div class="p-6">
+                <a href="#training" class="btn-primary w-full text-center block">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+                    Stop Juggling. <br> Start <span class="gradient-text">Organizing.</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
+                    The 5-Color System is a simple, powerful framework to bring clarity to your work, studies, and life. Turn chaos into an actionable, visual system.
+                </p>
+                <div class="mt-10 flex justify-center items-center space-x-4">
+                    <a href="#training" class="btn-primary">Book a Workshop</a>
+                    <a href="#method" class="font-bold text-gray-700 hover:text-black transition">Learn More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- The Method Section -->
+        <section id="method" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">The Master Key</h2>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        Five colors, five core purposes. This is the simple logic at the heart of the system, designed to help you instantly triage information.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <!-- Blue Card -->
+                    <div class="card border-t-4 border-blue-500">
+                        <i data-lucide="book-marked" class="w-12 h-12 text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">BLUE: KNOW</h3>
+                        <p class="text-gray-600">For reference material, facts, and your "single source of truth."</p>
+                    </div>
+                    <!-- Green Card -->
+                    <div class="card border-t-4 border-green-500">
+                        <i data-lucide="check-circle-2" class="w-12 h-12 text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">GREEN: DO</h3>
+                        <p class="text-gray-600">For actionable items, tasks, and deliverables. Your to-do list.</p>
+                    </div>
+                    <!-- Yellow Card -->
+                    <div class="card border-t-4 border-yellow-500">
+                        <i data-lucide="lightbulb" class="w-12 h-12 text-yellow-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">YELLOW: THINK</h3>
+                        <p class="text-gray-600">For ideas, questions, risks, and potential blockers.</p>
+                    </div>
+                    <!-- Pink Card -->
+                    <div class="card border-t-4 border-pink-500">
+                        <i data-lucide="users" class="w-12 h-12 text-pink-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">PINK: WHO</h3>
+                        <p class="text-gray-600">For people, communication, collaboration, and stakeholders.</p>
+                    </div>
+                    <!-- Orange Card -->
+                    <div class="card border-t-4 border-orange-500">
+                        <i data-lucide="calendar-clock" class="w-12 h-12 text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">ORANGE: WHEN</h3>
+                        <p class="text-gray-600">For deadlines, priorities, milestones, and critical dates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Applications Section -->
+        <section id="applications" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">A Universal Framework</h2>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        The system is flexible enough to be applied anywhere, from the classroom to the boardroom to your kitchen counter.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-8">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="graduation-cap" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">For Students</h3>
+                        <p class="text-gray-600">Master your coursework by color-coding syllabi, enhancing Cornell Notes, and seamlessly integrating with academic frameworks like AVID.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="bg-green-100 text-green-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="briefcase" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">For Professionals</h3>
+                        <p class="text-gray-600">Supercharge project management by applying the system to Kanban boards, meeting minutes, and strategic communications to align teams and stakeholders.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="bg-yellow-100 text-yellow-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="home" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">For Everyday Life</h3>
+                        <p class="text-gray-600">Organize household tasks, manage family schedules, plan personal projects, and finally get that pile of mail on the counter under control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Training Section -->
+        <section id="training" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Invest in Clarity</h2>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        We offer hands-on training workshops and coaching sessions to help you and your team master the system and unlock new levels of productivity.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Team Workshop Card -->
+                    <div class="card flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2">Team & Corporate Workshops</h3>
+                        <p class="text-gray-500 mb-6">For businesses and project teams.</p>
+                        <p class="text-4xl font-extrabold mb-6">$1,200 <span class="text-lg font-medium text-gray-500">/ half-day</span></p>
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> On-site or Virtual Session</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Up to 20 participants</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Digital & Physical Toolkits</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Focus on PM & Kanban</li>
+                        </ul>
+                        <a href="#" class="btn-primary text-center">Book a Workshop</a>
+                    </div>
+                    <!-- Academic Coaching Card -->
+                    <div class="card flex flex-col ring-2 ring-blue-500">
+                         <p class="text-center font-bold text-blue-600 bg-blue-100 py-1 rounded-full mb-4 -mt-8">Most Popular</p>
+                        <h3 class="text-2xl font-bold mb-2">Academic Coaching</h3>
+                        <p class="text-gray-500 mb-6">For students and educators.</p>
+                        <p class="text-4xl font-extrabold mb-6">$150 <span class="text-lg font-medium text-gray-500">/ 90-min session</span></p>
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> One-on-one virtual coaching</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Student Starter Kit PDF</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> AVID Integration techniques</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Digital tool setup guide</li>
+                        </ul>
+                        <a href="#" class="btn-primary text-center bg-blue-600 hover:bg-blue-700">Schedule a Session</a>
+                    </div>
+                    <!-- Personal Productivity Card -->
+                    <div class="card flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2">Personal Productivity</h3>
+                        <p class="text-gray-500 mb-6">For individuals and freelancers.</p>
+                        <p class="text-4xl font-extrabold mb-6">$99 <span class="text-lg font-medium text-gray-500">/ hour</span></p>
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> One-on-one virtual coaching</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Everyday life application</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Custom digital setup</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i> Follow-up email support</li>
+                        </ul>
+                        <a href="#" class="btn-primary text-center">Book Your Hour</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">The 5-Color System</h3>
+                    <p class="text-gray-400">A new era of organization. <br>Published from La Romana, DR.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigate</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#method" class="text-gray-400 hover:text-white">The Method</a></li>
+                        <li><a href="#applications" class="text-gray-400 hover:text-white">Applications</a></li>
+                        <li><a href="#training" class="text-gray-400 hover:text-white">Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 The 5-Color System. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
